@@ -1,4 +1,4 @@
-/* will ensur the childs box will remain within the parents box */
+/* will ensure the childs box will remain within the parents box */
 * {
   box-sizing: border-box;
 }
