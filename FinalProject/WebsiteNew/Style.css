@@ -1,3 +1,14 @@
+/*
+ NOTE TO TEAM
+
+ -  The naming conventions below have been borrowed - not stolen i might add from W3 to aid with any research in case that
+    anyone is absent it should be easier at our level to interpret and amend.
+
+ -  I have commented all css that may look slightly odd and with what the code intends to do
+
+ -
+
+
 /* will ensure the childs box will remain within the parents box */
 * {
   box-sizing: border-box;
@@ -44,7 +55,7 @@ body {
   text-decoration: none;
 }
 
-/* Change color the colour on mouse over */
+/* Change the colour when you move over a link - the 'a:hover' below relates to the anchor points */
 .topnav a:hover {
   background-color: red;
   color: black;
@@ -57,12 +68,12 @@ body {
   text-align:center;
 }
 
-/* Left and right */
+/* Left and right column styling */
 .column.side {
   width: 25%;
 }
 
-/* Middle */
+/* Middle column styling */
 .column.middle {
   width: 50%;
 }
@@ -80,6 +91,9 @@ helps with article separation and readability */
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
+  /* NOTE TO TEAM - below is box shadow explained https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  at the moment this is applied to all cards but can be split out using class or ID if needed only for certain elements*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
  }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -88,10 +102,11 @@ helps with article separation and readability */
     width: 100%;
   }
 }
-
+/* image on calculator page , can be moved to separate css file if more bespoke styling is needed for each page*/
 #redTick{
 width: 100px;
 height: 100px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 
