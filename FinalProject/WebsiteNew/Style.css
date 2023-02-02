@@ -99,6 +99,14 @@ helps with article separation and readability */
     width: 100%;
   }
 }
+/* make the nav bar stack vertically*/
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
 /* image on calculator page , can be moved to separate css file if more bespoke styling is needed for each page*/
 #redTick{
 width: 100px;
@@ -110,6 +118,10 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 width:500px; margin: 20px auto;
 }
 
+#video {
+max-width:100%;
+height: auto;
+}
 
 
 
