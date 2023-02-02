@@ -1,18 +1,22 @@
-onload = function () {
+window.onload = function () {
 
   var questionArea = document.getElementsByClassName('questions')[0],
       answerArea   = document.getElementsByClassName('answers')[0],
       checker      = document.getElementsByClassName('checker')[0],
       current      = 0,
 
-     // An object that holds all the questions + possible answers.
+     // An object that holds all the questions + possible answers..
      // In the array --> last digit gives the right answer position
       allQuestions = {
         'A percentage paid to a lender for the use of borrowed money is called?' : ['Credit','Debit','Loan','Interest', 3],
 
         'Pins and Passwords can be shared with?' : ['Partner', 'Nobody' , 'Best Friend',"Children",1],
 
-        'ATM can be used for?' : ['Both', 'Balance Enquiry', 'Cash Withdrawal', 0]
+        'ATM can be used for?' : ['Both', 'Balance Enquiry', 'Cash Withdrawal', 0],
+
+        'Which is the best way to pay for something to get purchase protection?': ['Cash','Bank transfer', 'Credit Card', 'Debit Card', 2],
+
+        'When you borrow money to buy a house what is this called?': ['Mortgage', 'Loan', 'Overdraft', 0]
       };
 
   function loadQuestion(curr) {
@@ -96,3 +100,4 @@ onload = function () {
                 // Start the quiz right away
                 loadQuestion(current);
                 loadAnswers(current);
+                }
