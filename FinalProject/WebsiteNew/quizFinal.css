@@ -8,13 +8,13 @@
 }
 
 #quiz {
-  background-color: #34495E;
+  background-color: white;
   padding-bottom: 60px;
   width: 100%;
   border-radius: 2%;
-  color: #fff;
+  color: black;
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 #quiz > h1 {
@@ -27,8 +27,8 @@
     font-size: 28px;
     font-weight: 700;
     font-style: italic;
-    border-top: 1px solid #FFFFFF;
-    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 20px;
   }
 
@@ -39,7 +39,7 @@
 
   .answers div:hover {
     cursor: pointer;
-    color: #FBCB43;
+    color: red;
   }
   .answers {
     padding: 0px 0 10px 0px;
