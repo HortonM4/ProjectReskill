@@ -5,7 +5,7 @@ onload = function () {
       checker      = document.getElementsByClassName('checker')[0],
       current      = 0,
 
-     // An object that holds all the questions + possible answers.
+     // An object that holds all the questions + possible answers..
      // In the array --> last digit gives the right answer position
       allQuestions = {
         'A percentage paid to a lender for the use of borrowed money is called?' : ['Credit','Debit','Loan','Interest', 3],
