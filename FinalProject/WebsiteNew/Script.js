@@ -15,7 +15,7 @@ function apiCall() {
     .then(res => res.json())
     .then(response => {
     // showing how to access items in the json structure
-    console.log('Checkout this JSON! ', response[0].housing);
+    console.log('Checkout this JSON! ', response[0]);
     housing = response[0].housing;
     householdBills = response[0].householdBills;
     transportation = response[0].transportation;
