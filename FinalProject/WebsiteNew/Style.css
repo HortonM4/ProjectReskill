@@ -6,9 +6,6 @@
 
  -  I have commented all css that may look slightly odd and with what the code intends to do
 
- -
-
-
 /* will ensure the childs box will remain within the parents box */
 * {
   box-sizing: border-box;
