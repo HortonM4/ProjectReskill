@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@CrossOrigin(origins = "http://127.0.0.1:5500") // Frontend server API will be placed here
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/budget/")
 public class ExpenseController {
@@ -25,6 +25,7 @@ public class ExpenseController {
     public ResponseEntity<List<Expense>> getAllExpenses() {
         List<Expense> expenseList = new ArrayList<>(expenseRepository.findAll());
         return new ResponseEntity<>(expenseList, HttpStatus.OK);
+
     }
 
     @PostMapping("/planner")
