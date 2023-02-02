@@ -1,4 +1,4 @@
-onload = function () {
+window.onload = function () {
 
   var questionArea = document.getElementsByClassName('questions')[0],
       answerArea   = document.getElementsByClassName('answers')[0],
@@ -12,7 +12,11 @@ onload = function () {
 
         'Pins and Passwords can be shared with?' : ['Partner', 'Nobody' , 'Best Friend',"Children",1],
 
-        'ATM can be used for?' : ['Both', 'Balance Enquiry', 'Cash Withdrawal', 0]
+        'ATM can be used for?' : ['Both', 'Balance Enquiry', 'Cash Withdrawal', 0],
+
+        'Which is the best way to pay for something to get purchase protection?': ['Cash','Bank transfer', 'Credit Card', 'Debit Card', 2],
+
+        'When you borrow money to buy a house what is this called?': ['Mortgage', 'Loan', 'Overdraft', 0]
       };
 
   function loadQuestion(curr) {
@@ -96,3 +100,4 @@ onload = function () {
                 // Start the quiz right away
                 loadQuestion(current);
                 loadAnswers(current);
+                }
