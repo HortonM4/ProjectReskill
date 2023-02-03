@@ -121,3 +121,17 @@ public class Expense {
         this.area = area;
     }
 }
+
+/*
+It is annotated with @Entity to indicate that it will be stored as a table in a relational database.
+ The @Table annotation specifies the name of the database table.
+The class has several fields, each of which is annotated with @Column to specify the corresponding database column name.
+ Fields ID, housing, householdBills, leisure, transport, holidays, clothes, and savings are of type double and represent different expenses.
+  Field area is of type String and represents the area the expenses were made.
+The class has both a default constructor and a constructor that takes parameters to initialize the fields.
+It also has getters and setters for each field.
+*/
+
+
+
+
