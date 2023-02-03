@@ -86,3 +86,12 @@ class ExpenseControllerTest {
     }
 
 }
+
+    /*  This is a JUnit test class for the ExpenseController class in a Spring Boot application.
+        The @WebMvcTest annotation is used to specify that this test is a web-layer test and only the ExpenseController will be loaded.
+        The MockMvc object is autowired to test the API endpoints, and the ObjectMapper is autowired for converting Java objects to and from JSON.
+        The ExpenseRepository is mocked with the @MockBean annotation and several test cases are written to test the ExpenseController.
+        The first two tests test the GET endpoint for getting all expenses and expect a 200 OK status and a JSON response with a size of 3, respectively.
+        The third test tests the POST endpoint for creating an expense and expects a 201 CREATED status.
+        Two helper methods, toJson and fromJson, are provided to convert objects to and from JSON.
+    */
