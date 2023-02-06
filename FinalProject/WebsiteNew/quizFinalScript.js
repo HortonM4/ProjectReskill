@@ -8,15 +8,25 @@ window.onload = function () {
      // An object that holds all the questions + possible answers..
      // In the array --> last digit gives the right answer position
       allQuestions = {
+        'In 2019 what % of the UK population were struggling to afford necessities?' : ['10%','90%','75%','45%', 3],
+
+        'Approximately how many UK adults dont have a bank account?' : [ '250,000','1,000,000','5,000,000','500,000', 1],
+
         'A percentage paid to a lender for the use of borrowed money is called?' : ['Credit','Debit','Loan','Interest', 3],
 
-        'Pins and Passwords can be shared with?' : ['Partner', 'Nobody' , 'Best Friend',"Children",1],
+        'What % of the UK population said they didnt feel confident managing their money?' : ['39','5','95','50', 0],
+
+        'Pins and Passwords can be shared with?' : ['Partner', 'Nobody' , 'Best Friend','Children',1],
+
+        'In August 2022 the average UK adult had how much unsecured debt' : ['£5762','£3877','£65986','£7783', 1],
 
         'ATM can be used for?' : ['Both', 'Balance Enquiry', 'Cash Withdrawal', 0],
 
         'Which is the best way to pay for something to get purchase protection?': ['Cash','Bank transfer', 'Credit Card', 'Debit Card', 2],
 
-        'When you borrow money to buy a house what is this called?': ['Mortgage', 'Loan', 'Overdraft', 0]
+        'In the year 2021-2022 which food item increased the most in price?' : ['Eggs', 'Pasta','Rice','Potatoes', 1],
+
+        'At what age will most banks allow you to have a debit card': ['6', '16', '11','18', 2]
       };
 
   function loadQuestion(curr) {
