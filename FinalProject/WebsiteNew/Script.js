@@ -1,3 +1,7 @@
+
+
+
+// test push
 // variables to be populated from function using data stored in database
 let housing;
 let householdBills;
@@ -6,8 +10,13 @@ let leisure;
 let holidays;
 let clothes;
 let savings;
-// to display in pounds and pence
 
+// to display in pounds and pence
+const formatter = new Intl.NumberFormat('en-UK', {
+    style: 'currency',
+    currency: 'GBP',
+    minimumFractionDigits: 2
+})
 
 function apiCall() {
   let url = 'http://localhost:8080/api/budget/planner';
@@ -31,6 +40,7 @@ function apiCall() {
     assignValues()
 
     console.log('Radio IDs for housing = ', housingNone ,housingLow, housingAvg, housingHigh)
+    console.log('Radio IDs for householdBills = ', householdBillsNone ,householdBillsLow, householdBillsAvg, householdBillsHigh)
 
 
     // un-hide - submit button will be hidden until var are populated/buttons are defined

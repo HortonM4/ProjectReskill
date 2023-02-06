@@ -76,7 +76,7 @@
 
         <div class="card">
             <h2> LIFESTYLE CHECKER</h2>
-            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost: £' + totalSelected();">
+            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost:' + formatter.format(totalSelected());">
                 <p>
                 <fieldset>
                     <legend>Housing</legend>
