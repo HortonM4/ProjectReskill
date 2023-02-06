@@ -24,7 +24,7 @@ window.onload = function () {
 
         'Which is the best way to pay for something to get purchase protection?': ['Cash','Bank transfer', 'Credit Card', 'Debit Card', 2],
 
-        'In the year 2021-2022 which food item increased the most in price?' : ['Eggs', 'Pasta','Rice','Potatoes', 1],
+        'In the year 2021-2022 which food item increased the most in price?'  : ['Eggs', 'Pasta','Rice','Potatoes', 1],
 
         'At what age will most banks allow you to have a debit card': ['6', '16', '11','18', 2]
       };
