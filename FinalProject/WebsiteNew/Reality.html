@@ -76,7 +76,7 @@
 
         <div class="card">
             <h2> LIFESTYLE CHECKER</h2>
-            <form>
+            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost: £' + totalSelected();">
                 <p>
                 <fieldset>
                     <legend>Housing</legend>
@@ -229,8 +229,11 @@
                         <label> HIGH </label><br>
                     </p>
                 </fieldset>
-                <br><input id="submit" type="submit" value="Submit" style="display:none">
+                <br>
+                <input type="submit" value="Submit">
             </form>
+            <br>
+            <div id="result"></div>
         </div>
     </div>
 
