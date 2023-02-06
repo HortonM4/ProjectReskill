@@ -10,7 +10,12 @@ let leisure;
 let holidays;
 let clothes;
 let savings;
-
+// to display in pounds and pence
+const formatter = new Intl.NumberFormat('en-UK', {
+    style: 'currency',
+    currency: 'GBP',
+    minimumFractionDigits: 2
+})
 
 function apiCall() {
   let url = 'http://localhost:8080/api/budget/planner';
@@ -33,7 +38,7 @@ function apiCall() {
     // Assigns values to radio buttons
     assignValues()
 
-    console.log('Radio ID housingLow = ', housingLow)
+    console.log('Radio IDs for housing = ', housingNone ,housingLow, housingAvg, housingHigh)
 
 
     // un-hide - submit button will be hidden until var are populated/buttons are defined
@@ -41,35 +46,36 @@ function apiCall() {
     })
 .catch(err => { throw err });
 }
+
 function assignValues(){
-    document.getElementById('housingNone').setAttribute('value', 0);
-    document.getElementById('housingLow').setAttribute('value', housing * .7);
-    document.getElementById('housingAvg').setAttribute('value', housing);
-    document.getElementById('housingHigh').setAttribute('value', housing * 1.3);
-    document.getElementById('householdBillsNone').setAttribute('value', 0);
-    document.getElementById('householdBillsLow').setAttribute('value', householdBills * .7);
-    document.getElementById('householdBillsAvg').setAttribute('value', householdBills);
-    document.getElementById('householdBillsHigh').setAttribute('value', householdBills * 1.3);
-    document.getElementById('transportationNone').setAttribute('value', 0);
-    document.getElementById('transportationLow').setAttribute('value', transportation * .7);
-    document.getElementById('transportationAvg').setAttribute('value', transportation);
-    document.getElementById('transportationHigh').setAttribute('value', transportation * 1.3);
-    document.getElementById('leisureNone').setAttribute('value', 0);
-    document.getElementById('leisureLow').setAttribute('value', leisure * .7);
-    document.getElementById('leisureAvg').setAttribute('value', leisure);
-    document.getElementById('leisureHigh').setAttribute('value', leisure * 1.3);
-    document.getElementById('holidaysNone').setAttribute('value', 0);
-    document.getElementById('holidaysLow').setAttribute('value', holidays * .7);
-    document.getElementById('holidaysAvg').setAttribute('value', holidays);
-    document.getElementById('holidaysHigh').setAttribute('value', holidays * 1.3);
-    document.getElementById('clothesNone').setAttribute('value', 0);
-    document.getElementById('clothesLow').setAttribute('value', clothes * .7);
-    document.getElementById('clothesAvg').setAttribute('value', clothes);
-    document.getElementById('clothesHigh').setAttribute('value', clothes * 1.3);
-    document.getElementById('savingsNone').setAttribute('value', 0);
-    document.getElementById('savingsLow').setAttribute('value', savings * .7);
-    document.getElementById('savingsAvg').setAttribute('value', savings);
-    document.getElementById('savingsHigh').setAttribute('value', savings * 1.3);
+    document.getElementById('housingNone').setAttribute('value', formatter.format(housing * 0));
+    document.getElementById('housingLow').setAttribute('value', formatter.format(housing * .7));
+    document.getElementById('housingAvg').setAttribute('value', formatter.format(housing));
+    document.getElementById('housingHigh').setAttribute('value', formatter.format(housing * 1.3));
+    document.getElementById('householdBillsNone').setAttribute('value', formatter.format(householdBills * 0));
+    document.getElementById('householdBillsLow').setAttribute('value', formatter.format(householdBills * .7));
+    document.getElementById('householdBillsAvg').setAttribute('value', formatter.format(householdBills));
+    document.getElementById('householdBillsHigh').setAttribute('value', formatter.format(householdBills * 1.3));
+    document.getElementById('transportationNone').setAttribute('value', formatter.format(transportation * 0));
+    document.getElementById('transportationLow').setAttribute('value', formatter.format(transportation * .7));
+    document.getElementById('transportationAvg').setAttribute('value', formatter.format(transportation));
+    document.getElementById('transportationHigh').setAttribute('value', formatter.format(transportation * 1.3));
+    document.getElementById('leisureNone').setAttribute('value', formatter.format(leisure * 0));
+    document.getElementById('leisureLow').setAttribute('value', formatter.format(leisure * .7));
+    document.getElementById('leisureAvg').setAttribute('value', formatter.format(leisure));
+    document.getElementById('leisureHigh').setAttribute('value', formatter.format(leisure * 1.3));
+    document.getElementById('holidaysNone').setAttribute('value', formatter.format(holidays * 0));
+    document.getElementById('holidaysLow').setAttribute('value', formatter.format(holidays * .7));
+    document.getElementById('holidaysAvg').setAttribute('value', formatter.format(holidays));
+    document.getElementById('holidaysHigh').setAttribute('value', formatter.format(holidays * 1.3));
+    document.getElementById('clothesNone').setAttribute('value', formatter.format(clothes * 0));
+    document.getElementById('clothesLow').setAttribute('value', formatter.format(clothes * .7));
+    document.getElementById('clothesAvg').setAttribute('value', formatter.format(clothes));
+    document.getElementById('clothesHigh').setAttribute('value', formatter.format(clothes * 1.3));
+    document.getElementById('savingsNone').setAttribute('value', formatter.format(savings * 0));
+    document.getElementById('savingsLow').setAttribute('value', formatter.format(savings * .7));
+    document.getElementById('savingsAvg').setAttribute('value', formatter.format(savings));
+    document.getElementById('savingsHigh').setAttribute('value', formatter.format(savings * 1.3));
 }
 
 function totalSelected(){
@@ -160,5 +166,7 @@ function totalSelected(){
         }
     return totalCost
 }
+
+
 
 apiCall();
