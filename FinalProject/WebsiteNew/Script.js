@@ -6,7 +6,14 @@ let leisure;
 let holidays;
 let clothes;
 let savings;
+
 // to display in pounds and pence
+const formatter = new Intl.NumberFormat('en-UK', {
+    style: 'currency',
+    currency: 'GBP',
+    minimumFractionDigits: 2
+})
+
 
 
 function apiCall() {
