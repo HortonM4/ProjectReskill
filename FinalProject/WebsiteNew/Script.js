@@ -22,12 +22,13 @@ function apiCall() {
     console.log('Checkout this JSON! ', response[0]);
     housing = response[0].housing;
     householdBills = response[0].householdBills;
-    transportation = response[0].transportation;
+    transportation = response[0].transport;
     leisure = response[0].leisure;
     holidays = response[0].holidays;
     clothes= response[0].clothes;
     savings= response[0].savings;
 
+    console.log(transportation)
     // un-hide - submit button will be hidden until var are populated
     document.getElementById('submit').style.display='block';
     })

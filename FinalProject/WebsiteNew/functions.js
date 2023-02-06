@@ -1,28 +1,6 @@
-// Framework
-http://localhost:8080/api/budget/planner
-function testApiCall() {
-
-  console.log("here");
 
 
-  let url = 'http://localhost:8080/api/budget/planner';
 
-fetch(url)
-.then(res => res.json())
-.then(response => {
-  // showing how to access items in the json structure
-  console.log('Checkout this JSON! ', response.housing);
-  // for debugigng I'm stringifying the json so you can see it in a text area
-//  document.getElementById('response').value = JSON.stringify(response, null, 4);
-
-  // here's how we would get the rate - here setting it in a field
-//   document.getElementById('rate').value = response.info.rate;
-}
-     )
-.catch(err => { throw err });
-}
-
-testApiCall();
 
 // variables to be populated from function using data stored in database
 let housing;
