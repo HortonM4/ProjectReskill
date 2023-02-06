@@ -165,7 +165,4 @@ function totalSelected() {
         }
     return totalCost;
     }
-
-
-
 apiCall();
