@@ -5,6 +5,7 @@
   margin: 0 auto;
   height: 100%;
   padding-top: 0px;
+  max-width: 100%;
 }
 
 #quiz {
