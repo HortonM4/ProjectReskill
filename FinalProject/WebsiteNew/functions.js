@@ -34,6 +34,8 @@ const formatter = new Intl.NumberFormat('en-UK', {
 
 // to summarise from form selections
 
+
+
 function totalSelected(){
     let totalCost= 0;
     if (document.getElementById("housingNone").checked){
