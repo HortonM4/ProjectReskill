@@ -39,6 +39,19 @@ function apiCall() {
 
     console.log('Radio IDs for housing = ', housingNone ,housingLow, housingAvg, housingHigh)
 
+    document.getElementById("savingsInfo").innerHTML = "The median savings figure in the UK is <strong>£" + savings + "</strong>";
+    document.getElementById("housingInfo").innerHTML = "The Average cost of rent in the UK (excl London) is <strong>£" + housing + "</strong>";
+    document.getElementById("householdBillsInfo").innerHTML = "The Average cost of Household bills in the UK is <strong>£" + householdBills + "</strong>";
+    document.getElementById("transportationInfo").innerHTML = "The average cost of transportation in the UK <strong>£" + transportation + "</strong>";
+    document.getElementById("leisureInfo").innerHTML = "The average cost of leisure activities in the UK (TV packages , Takeaways , gym membership etc. ) is <strong>£" + leisure + "</strong>";
+    document.getElementById("clothesInfo").innerHTML = "The average cost of clothes in the UK (recommended 5% of your monthly take home pay)is <strong>£" + clothes + "</strong>";
+    document.getElementById("holidaysInfo").innerHTML = "The Average cost of a Holiday in the UK (monthly equivalent based on UK average of 2 weeks of holidays taken, at £855 per person per week is <strong>£" + holidays + "</strong>";
+
+
+
+
+
+
 
     // un-hide - submit button will be hidden until var are populated/buttons are defined
     document.getElementById('submit').style.display='block';
@@ -165,4 +178,7 @@ function totalSelected() {
         }
     return totalCost;
     }
+
+
 apiCall();
+
