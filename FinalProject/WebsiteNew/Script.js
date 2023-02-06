@@ -47,12 +47,6 @@ function apiCall() {
     document.getElementById("clothesInfo").innerHTML = "The average cost of clothes in the UK (recommended 5% of your monthly take home pay)is <strong>£" + clothes + "</strong>";
     document.getElementById("holidaysInfo").innerHTML = "The Average cost of a Holiday in the UK (monthly equivalent based on UK average of 2 weeks of holidays taken, at £855 per person per week is <strong>£" + holidays + "</strong>";
 
-
-
-
-
-
-
     // un-hide - submit button will be hidden until var are populated/buttons are defined
     document.getElementById('submit').style.display='block';
     })
