@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="calc.png">
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
 </head>
 <body>
 <div class="card">
@@ -76,7 +76,7 @@
 
         <div class="card">
             <h2> LIFESTYLE CHECKER</h2>
-            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost:' + formatter.format(totalSelected());">
+            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost: ' + formatter.format(totalSelected());">
                 <p>
                 <fieldset>
                     <legend>Housing</legend>
@@ -230,7 +230,7 @@
                     </p>
                 </fieldset>
                 <br>
-                <input type="submit" value="Submit">
+                <input id="submit" type="submit" value="Submit" style="display:none">
             </form>
             <br>
             <div id="result"></div>
