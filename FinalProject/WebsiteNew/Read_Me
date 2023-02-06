@@ -1,0 +1,21 @@
+Accessibility
+
+- Alt tags have been given to all images on the site. This allows a description of the image in case the image doesn't load.
+
+- Default font size in browsers is 16px which is the best for readability.
+        - no font size has been changed.
+
+- Limited the use of graphics to aid readability.
+
+- Video has been embedded with close captions.
+
+- Research carried out on the formatting of forms.
+        - our form has made use of FieldSet and Legend to ensure elements are separated.
+        - our form can be navigated using Tab and Arrow keys.
+
+- Research indicated that black text on a white or pale background is best for readability.
+
+- font styling remains consitant with browser defaults - research suggests the defaults are best for readability for all.
+
+
+-
