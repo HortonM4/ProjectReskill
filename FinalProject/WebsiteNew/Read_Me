@@ -14,6 +14,7 @@ Accessibility
         - our form can be navigated using Tab and Arrow keys.
 
 - Research indicated that black text on a white or pale background is best for readability.
+        - background colour changed to alternative pale colour to aid the readability of articles which remain on white background
 
 - font styling remains consistent with browser defaults - research suggests the defaults are best for readability for all.
 
