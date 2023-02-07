@@ -5,8 +5,6 @@ const formatter = new Intl.NumberFormat('en-UK', {
     minimumFractionDigits: 2
 })
 
-
-// test push
 // variables to be populated from function using data stored in database
 let housing;
 let householdBills;
@@ -18,30 +16,53 @@ let savings;
 let salary;
 
 
+// Function to store the salary and format it
 function storeSalary() {
-  salary = parseFloat(document.getElementById("salaryInput").value);
-  console.log(formatter.format(salary));
-  document.getElementById("salaryInput").style.backgroundColor = "green";
+// Get the value of the salary input and parse it as a float
+salary = parseFloat(document.getElementById("salaryInput").value);
+// Check if the salary value exists
+if (salary) {
+// Log the formatted salary to the console
+console.log(formatter.format(salary));
+// Change the background color of the input to green
+document.getElementById("salaryInput").style.backgroundColor = "green";
+} else {
+// Change the background color of the input to red
+document.getElementById("salaryInput").style.backgroundColor = "red";
+}
 }
 
+// Event listener to restrict input to only numbers
 document.getElementById("salaryInput").addEventListener("input", function (e) {
+  // Check if the value is a number with up to 2 decimal places
   if (!/^\d*(\.\d{0,2})?$/.test(e.target.value)) {
+    // If it's not a number, remove the last character
     e.target.value = e.target.value.substring(0, e.target.value.length - 1);
   }
 });
 
 
+// Function to handle form submission
 function handleFormSubmit(event) {
+  // Prevent default form behavior
   event.preventDefault();
+  // Check if salary has been set
   if (!salary) {
+    // If salary is not set, clear the result element and return
     document.getElementById('result').innerHTML = '';
     return;
   }
+  // Get the total cost of selected items
   const totalCost = totalSelected();
+  // Calculate the remaining salary
   const remaining = salary - totalCost;
+  // Calculate the spent percentage of the salary
   let spentPercentage = Math.round((totalCost / salary) * 100);
+  // Check if the spent percentage is over 100
   spentPercentage = spentPercentage > 100 ? 100 : spentPercentage;
+  // Calculate the remaining percentage of the salary
   const remainingPercentage = 100 - spentPercentage;
+  // Update the result element with the calculated values
   document.getElementById('result').innerHTML = `
     <div class="salary-container">
       <div class="spent" style="width: ${spentPercentage}%">
@@ -58,10 +79,6 @@ function handleFormSubmit(event) {
     </div>
   `;
 }
-
-
-
-
 
 function apiCall() {
   let url = 'http://localhost:8080/api/budget/planner';
