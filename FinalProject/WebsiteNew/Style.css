@@ -167,7 +167,10 @@ height: auto;
   bottom: 110%;
   right: 105%;
 }
-
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+  }
 
 
 /* Show the tooltip text when you mouse over the tooltip container */

@@ -82,7 +82,11 @@
 
         <div class="card">
             <h2> LIFESTYLE CHECKER</h2>
-            <form onsubmit="event.preventDefault(); document.getElementById('result').innerHTML = 'Total Cost: ' + formatter.format(totalSelected());">
+            <form onsubmit=
+                          "event.preventDefault();
+                          const totalCost = totalSelected();
+                          document.getElementById('result').innerHTML = 'Total Monthly Cost: ' + formatter.format(totalCost) + '<br>' +
+                          'Monthly Salary minus Total Monthly Cost: ' + formatter.format(salary - totalCost);">
                 <p>
                 <fieldset>
                     <legend>Housing</legend>
@@ -226,6 +230,18 @@
                         <label class="tooltip"> HIGH <span class="tooltiptextR">If you can afford to save more you could use your money to invest for the future, or to protect yourself from financial hardship</span></label><br>
                     </p>
                 </fieldset>
+                <fieldset>
+                    <legend>Salary</legend>
+                    <br>
+                    <i>Enter your monthly Salary after tax. If unsure of Salary amount please use the link below to calculate your salary</i><br>
+                    <br>
+                    <a href="https://www.thesalarycalculator.co.uk/salary.php" target="_blank">
+                        The Salary Calculator</a><br>
+                    <br>
+                    £<input type="text" id="salaryInput">
+                    <button type="button" onclick="storeSalary()">Submit</button>
+                </fieldset>
+
                 <br>
                 <input id="submit" type="submit" value="Submit" style="display:none">
             </form>

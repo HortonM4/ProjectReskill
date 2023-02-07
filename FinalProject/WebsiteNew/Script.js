@@ -1,4 +1,9 @@
-
+// to display in pounds and pence
+const formatter = new Intl.NumberFormat('en-UK', {
+    style: 'currency',
+    currency: 'GBP',
+    minimumFractionDigits: 2
+})
 
 
 // test push
@@ -10,14 +15,13 @@ let leisure;
 let holidays;
 let clothes;
 let savings;
+let salary;
 
-// to display in pounds and pence
-const formatter = new Intl.NumberFormat('en-UK', {
-    style: 'currency',
-    currency: 'GBP',
-    minimumFractionDigits: 2
-})
 
+   function storeSalary() {
+      salary = parseFloat(document.getElementById("salaryInput").value);
+      console.log(formatter.format(salary));
+      }
 
 
 function apiCall() {
@@ -175,9 +179,6 @@ function totalSelected() {
         totalCost += parseFloat(document.getElementById("savingsHigh").value)
         }
     return totalCost;
-    }
-
-
+        }
 
 apiCall();
-
