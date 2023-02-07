@@ -23,6 +23,14 @@ let salary;
       console.log(formatter.format(salary));
       }
 
+   function handleFormSubmit(event) {
+        event.preventDefault();
+        const totalCost = totalSelected();
+        document.getElementById('result').innerHTML = 'Total Monthly Cost: ' + formatter.format(totalCost) + '<br>' +
+        'Remaining salary: ' + formatter.format(salary - totalCost);
+      }
+
+
 
 function apiCall() {
   let url = 'http://localhost:8080/api/budget/planner';

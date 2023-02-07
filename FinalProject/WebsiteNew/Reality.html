@@ -71,11 +71,11 @@
                 So why wait? Start using our calculator today and get a clearer picture of your financial situation.
             </p>
             <h3> How should you use the Lifestyle checker</h3>
-            <p> The lifestyle checker includes the 7 main areas of household spending.
-
+            <p> The lifestyle checker includes the 7 main areas of household spending.<br>
+                <br>
                 The average cost has been included in each section along with some useful links.  All you need to do
-                is select whether this is right for your current or desired spending or if you will spend more or less.
-
+                is select whether this is right for your current or desired spending or if you will spend more or less.<br>
+                <br>
                 Once you choose your amounts and submit your monthly salary the result will show how much excess you have left from your salary each month and what
                 will help you to understand what salary you need to achieve your desired lifestyle along with some useful
                 tips to help you achieve this. </p>
@@ -83,11 +83,7 @@
 
         <div class="card">
             <h2> LIFESTYLE CHECKER</h2>
-            <form onsubmit=
-                          "event.preventDefault();
-                          const totalCost = totalSelected();
-                          document.getElementById('result').innerHTML = 'Total Monthly Cost: ' + formatter.format(totalCost) + '<br>' +
-                          'Monthly Salary minus Total Monthly Cost: ' + formatter.format(salary - totalCost);">
+            <form onsubmit="handleFormSubmit(event)">
                 <p>
                 <fieldset>
                     <legend>Housing</legend>
