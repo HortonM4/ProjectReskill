@@ -107,9 +107,7 @@ helps with article separation and readability */
     width: 100%;
   }
 }
-@media only screen and (min-width: 768px) {
-  /* styles for landscape orientation */
-}
+
 
 /* image on calculator page , can be moved to separate css file if more bespoke styling is needed for each page*/
 #redTick{
@@ -140,8 +138,9 @@ height: auto;
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
-  background-color: black;
-  color: #fff;
+
+  background-color: #c8d8e4;
+  color: black;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -155,8 +154,8 @@ height: auto;
 .tooltip .tooltiptextR {
   visibility: hidden;
   width: 200px;
-  background-color: black;
-  color: #fff;
+  background-color: #c8d8e4;
+  color: black;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
