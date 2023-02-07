@@ -18,17 +18,48 @@ let savings;
 let salary;
 
 
-   function storeSalary() {
-      salary = parseFloat(document.getElementById("salaryInput").value);
-      console.log(formatter.format(salary));
-      }
+function storeSalary() {
+  salary = parseFloat(document.getElementById("salaryInput").value);
+  console.log(formatter.format(salary));
+  document.getElementById("salaryInput").style.backgroundColor = "green";
+}
 
-   function handleFormSubmit(event) {
-        event.preventDefault();
-        const totalCost = totalSelected();
-        document.getElementById('result').innerHTML = 'Total Monthly Cost: ' + formatter.format(totalCost) + '<br>' +
-        'Remaining salary: ' + formatter.format(salary - totalCost);
-      }
+document.getElementById("salaryInput").addEventListener("input", function (e) {
+  if (!/^\d*(\.\d{0,2})?$/.test(e.target.value)) {
+    e.target.value = e.target.value.substring(0, e.target.value.length - 1);
+  }
+});
+
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  if (!salary) {
+    document.getElementById('result').innerHTML = '';
+    return;
+  }
+  const totalCost = totalSelected();
+  const remaining = salary - totalCost;
+  let spentPercentage = Math.round((totalCost / salary) * 100);
+  spentPercentage = spentPercentage > 100 ? 100 : spentPercentage;
+  const remainingPercentage = 100 - spentPercentage;
+  document.getElementById('result').innerHTML = `
+    <div class="salary-container">
+      <div class="spent" style="width: ${spentPercentage}%">
+        ${spentPercentage !== 0 ? `<span class="percentage">${spentPercentage}%</span>` : ''}
+      </div>
+      <div class="remaining" style="width: ${remainingPercentage}%">
+        ${remainingPercentage !== 0 ? `<span class="percentage">${remainingPercentage}%</span>` : ''}
+      </div>
+    </div>
+    <div class="text"><br>
+      Total Monthly Cost: ${formatter.format(totalCost)}<br>
+      <br>
+      Remaining salary: ${formatter.format(remaining)}
+    </div>
+  `;
+}
+
+
 
 
 
