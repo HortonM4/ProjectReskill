@@ -1,3 +1,7 @@
+
+
+
+// test push
 // variables to be populated from function using data stored in database
 let housing;
 let householdBills;
@@ -50,8 +54,8 @@ function apiCall() {
     // un-hide - submit button will be hidden until var are populated/buttons are defined
     document.getElementById('submit').style.display='block';
     })
-.catch(err => { throw err });
-}
+    .catch(err => { throw err });
+    }
 function assignValues(){
     document.getElementById('housingNone').setAttribute('value', 0);
     document.getElementById('housingLow').setAttribute('value', housing * .7);
@@ -172,6 +176,7 @@ function totalSelected() {
         }
     return totalCost;
     }
+
 
 
 apiCall();
