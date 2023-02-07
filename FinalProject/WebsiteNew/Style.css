@@ -149,7 +149,7 @@ height: auto;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  top: -5px;
+  Top: 110%;
   left: 105%;
 }
 .tooltip .tooltiptextR {
@@ -165,7 +165,7 @@ height: auto;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  top: -5px;
+  bottom: 110%;
   right: 105%;
 }
 
