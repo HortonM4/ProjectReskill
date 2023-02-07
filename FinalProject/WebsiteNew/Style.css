@@ -177,6 +177,10 @@ height: auto;
 .tooltip:hover .tooltiptextR {
   visibility: visible;
 }
+#list{
+text-align: left}
 
+#ulList{
+text-align: left}
 
 
