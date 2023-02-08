@@ -214,8 +214,9 @@ text-align: left}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
+    font-family: "Verdana", "Arial", "Helvetica"
   }
 
   .text {
