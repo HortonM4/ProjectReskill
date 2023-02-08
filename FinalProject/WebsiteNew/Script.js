@@ -56,13 +56,28 @@ function handleFormSubmit(event) {
   const totalCost = totalSelected();
   // Calculate the remaining salary
   const remaining = salary - totalCost;
+  // Check if there is a positive remaining salary
+  let message = '';
+  if (remaining > 0) {
+    // Create a message if there is a positive remaining salary
+    message = `<div class="positive-message"> <b> Based on your selections your monthly household budget will leave ${formatter.format(remaining)}
+    at the end of the month. <br><br> You could use the extra money to increase your savings, or devote more to areas which are important to you.
+    If you have low or no savings, you may wish to set a savings goal before spending extra on non-essential Items.<br>
+    <br>Feel free to re-run the checker with different selections to see all of your options. </b></div>`;
+  } else if (remaining < 0) {
+    // Create a message if there is a negative remaining salary
+    message = `<div class="negative-message"> <b> Unfortunately your expected monthly budget comes out higher than your monthly salary leaving your remaining balance at ${formatter.format(remaining)}
+    Have another go at choosing your monthly outgoings with the checker. <br><br> It’s important to be realistic about what you can afford so you don’t go into debt, or find yourself struggling to make ends meet.
+    Remember as time goes on your circumstances will change so you can always adjust your spend in the future as your income increases, or your spending patterns change.
+    <br><br>Have a look at our website for some helpful money saving tips too. </b></div>`;
+  }
   // Calculate the spent percentage of the salary
   let spentPercentage = Math.round((totalCost / salary) * 100);
   // Check if the spent percentage is over 100
   spentPercentage = spentPercentage > 100 ? 100 : spentPercentage;
   // Calculate the remaining percentage of the salary
   const remainingPercentage = 100 - spentPercentage;
-  // Update the result element with the calculated values
+  // Update the result element with the calculated values and the message
   document.getElementById('result').innerHTML = `
     <div class="salary-container">
       <div class="spent" style="width: ${spentPercentage}%">
@@ -77,8 +92,12 @@ function handleFormSubmit(event) {
       <br>
       Remaining salary: ${formatter.format(remaining)}
     </div>
+    <br>
+    ${message}
   `;
 }
+
+
 
 function apiCall() {
   let url = 'http://localhost:8080/api/budget/planner';
