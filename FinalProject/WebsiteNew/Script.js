@@ -74,7 +74,17 @@ function handleFormSubmit(event) {
   // Calculate the spent percentage of the salary
   let spentPercentage = Math.round((totalCost / salary) * 100);
   // Check if the spent percentage is over 100
-  spentPercentage = spentPercentage > 100 ? 100 : spentPercentage;
+  if (spentPercentage > 100) {
+    document.getElementById('result').innerHTML = `
+      <div class="salary-container">
+        <div class="spent" style="width: 100%">
+          <span class="percentage">You're over budget</span>
+        </div>
+      </div>
+      ${message}
+    `;
+    return;
+  }
   // Calculate the remaining percentage of the salary
   const remainingPercentage = 100 - spentPercentage;
   // Update the result element with the calculated values and the message
@@ -87,12 +97,6 @@ function handleFormSubmit(event) {
         ${remainingPercentage !== 0 ? `<span class="percentage">${remainingPercentage}%</span>` : ''}
       </div>
     </div>
-    <div class="text"><br>
-      Total Monthly Cost: ${formatter.format(totalCost)}<br>
-      <br>
-      Remaining salary: ${formatter.format(remaining)}
-    </div>
-    <br>
     ${message}
   `;
 }
