@@ -66,7 +66,7 @@ function handleFormSubmit(event) {
     <br>Feel free to re-run the checker with different selections to see all of your options. </b></div>`;
   } else if (remaining < 0) {
     // Create a message if there is a negative remaining salary
-    message = `<div class="negative-message"> <b> Unfortunately your expected monthly budget comes out higher than your monthly salary leaving your remaining balance at ${formatter.format(remaining)}
+    message = `<div class="negative-message"> <b> Unfortunately your expected monthly budget comes out higher than your monthly salary leaving your remaining balance at ${formatter.format(remaining)}.
     Have another go at choosing your monthly outgoings with the checker. <br><br> It’s important to be realistic about what you can afford so you don’t go into debt, or find yourself struggling to make ends meet.
     Remember as time goes on your circumstances will change so you can always adjust your spend in the future as your income increases, or your spending patterns change.
     <br><br>Have a look at our website for some helpful money saving tips too. </b></div>`;
