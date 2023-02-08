@@ -25,10 +25,10 @@ if (salary) {
 // Log the formatted salary to the console
 console.log(formatter.format(salary));
 // Change the background color of the input to green
-document.getElementById("salaryInput").style.backgroundColor = "green";
+document.getElementById("salaryInput").style.backgroundColor = "lightgreen";
 } else {
 // Change the background color of the input to red
-document.getElementById("salaryInput").style.backgroundColor = "red";
+document.getElementById("salaryInput").style.backgroundColor = "tomato";
 }
 }
 
