@@ -97,6 +97,12 @@ function handleFormSubmit(event) {
         ${remainingPercentage !== 0 ? `<span class="percentage">${remainingPercentage}%</span>` : ''}
       </div>
     </div>
+        <div class="text"><br>
+          Total Monthly Cost: ${formatter.format(totalCost)}<br>
+          <br>
+          Remaining salary: ${formatter.format(remaining)}
+        </div>
+        <br>
     ${message}
   `;
 }
