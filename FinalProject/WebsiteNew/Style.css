@@ -165,7 +165,7 @@ height: auto;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 110%;
+  top: 110%;
   right: 105%;
 }
 input[type="submit"] {
